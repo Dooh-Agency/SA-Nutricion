@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* Colores tomados del sitio Wix */
+@theme {
+  --color-sage: #5c856a;      /* verde del logo, botones y frase */
+  --color-olive: #45451b;     /* textos secundarios y overlay del hero */
+  --color-sand: #f7eee4;      /* fondo de "Sobre mí" y footer */
+  --color-terracotta: #da865d; /* isotipo de fondo (marca de agua) */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 1s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
